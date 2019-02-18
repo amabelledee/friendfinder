@@ -43,8 +43,6 @@ module.exports = function(app) {
         console.log("Sum of users score " + sum);
         console.log("Best match friend diff " + bestMatch.friendDifference);
 
-
-        console.log("+++++++=================++++++++++");
         // Loop to go through all friends
         for (var i = 0; i < friends.length; i++) {
 
