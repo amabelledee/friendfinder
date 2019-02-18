@@ -30,16 +30,16 @@ module.exports = function(app) {
             return parseInt(item, 10);
         });
         userData = {
-            "name": req.body.name,
-            "photo": req.body.photo,
-            "scores": s
+            name: req.body.name,
+            photo: req.body.photo,
+            scores: s
         }
 
 
         console.log("Name: " + userName);
         console.log("User Score " + userScores);
         //Adds up all the numbers to determine score
-        var sum = b.reduce((a, b) => a + b, 0);
+        var sum = s.reduce((a, s) => a + s, 0);
         console.log("Sum of users score " + sum);
         console.log("Best match friend diff " + bestMatch.friendDifference);
 
