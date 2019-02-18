@@ -17,6 +17,7 @@ var friends = [
     {
         name: "Dr. Wong",
         photo: "https://vignette.wikia.nocookie.net/rickandmorty/images/a/a4/Dr._Wong.png/revision/latest/scale-to-width-down/1000?cb=20170804214823",
-        scores: [4, 2, 1, 4, 5, 1, 3, 2, 5,5]
+        scores: [4, 2, 1, 4, 5, , 3, 2, 5,5]
     },
-]
+];
+module.exports = friends;
