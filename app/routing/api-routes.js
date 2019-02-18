@@ -1,4 +1,3 @@
-
 // require the file with friend data
 var friends = require('../data/friends.js');
 
@@ -27,13 +26,13 @@ module.exports = function(app) {
         var userName = userData.name;
         var userScores = userData.scores;
         // Parse Int converts the users score to a number 
-        var b = userScores.map(function(item) {
+        var s = userScores.map(function(item) {
             return parseInt(item, 10);
         });
         userData = {
             "name": req.body.name,
             "photo": req.body.photo,
-            "scores": b
+            "scores": s
         }
 
 
