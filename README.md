@@ -1,5 +1,6 @@
 # friendfinder
-This app helps you find your friends!
+This app helps you find your true love!
+[Heroku Link] (https://blooming-springs-56380.herokuapp.com/)
 
 Node Packages used:
 * Express
