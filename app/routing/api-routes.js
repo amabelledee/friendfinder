@@ -39,14 +39,14 @@ module.exports = function(app) {
 
         console.log("Name: " + userName);
         console.log("User Score " + userScores);
-        // Converting the users score to a sum number (Adds up all the numbers in array)
+        //Adds up all the numbers to determine score
         var sum = b.reduce((a, b) => a + b, 0);
         console.log("Sum of users score " + sum);
         console.log("Best match friend diff " + bestMatch.friendDifference);
 
 
         console.log("+++++++=================++++++++++");
-        // Loop through all the friend possibilities in the database. 
+        // Loop to go through all friends
         for (var i = 0; i < friends.length; i++) {
 
             console.log(friends[i].name);
@@ -58,14 +58,7 @@ module.exports = function(app) {
             console.log("Total friend score " + bfriendScore);
             totalDifference += Math.abs(sum - bfriendScore);
             console.log(" -------------------> " + totalDifference);
-            // Loop through all the scores of each friend
-            // for (var j = 0; j < friends[i].scores[j]; j++) {
 
-            //     // We calculate the difference between the scores and sum them into the totalDifference
-            //     totalDifference += Math.abs(sum - parseInt(friends[i].scores[j]));
-            //     console.log(friends[i].scores[j] + " Friends Scores");
-
-            // If the sum of differences is less then the differences of the current "best match"
             if (totalDifference <= bestMatch.friendDifference) {
 
                 // Reset the bestMatch to be the new friend. 
@@ -79,12 +72,12 @@ module.exports = function(app) {
 
         }
         console.log(bestMatch);
-        // Finally save the user's data to the database (this has to happen AFTER the check. otherwise,
-        // the database will always return that the user is the user's best friend).
+
+
         friends.push(userData);
         console.log("New User added");
         console.log(userData);
-        // Return a JSON with the user's bestMatch. This will be used by the HTML in the next page. 
+
         res.json(bestMatch);
 
     });
