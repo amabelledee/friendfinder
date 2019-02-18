@@ -22,11 +22,11 @@ module.exports = function(app) {
             friendDifference: 1000
         };
 
-        // Here we take the result of the user's survey POST and parse it.
+        //Take the result of the user's survey POST and parse it.
         var userData = req.body;
         var userName = userData.name;
         var userScores = userData.scores;
-        // Converting the users score to a number (Instead of string)
+        // Parse Int converts the users score to a number 
         var b = userScores.map(function(item) {
             return parseInt(item, 10);
         });
