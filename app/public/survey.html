@@ -34,11 +34,11 @@
         <div class="form-group">
             <h2>ABOUT YOU</h2>
             <label for="exampleFormControlInput1">Full Name</label>
-            <input type="name" class="form-control" id="name-required" placeholder="Full Name" required>
+            <input class="form-control" id="name" placeholder="Full Name" required>
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Link to Photo Image (Required)</h4>
-                <input type="text" name="" id="photo" class="form-control" placeholder="http://example.com/ex.jpg"
+                <input id="photo" class="form-control" placeholder="http://example.com/ex.jpg"
                     required>
         </div>
         <div class="form-group">
@@ -192,10 +192,6 @@
                 if ($(this).val() === '')
                     isValid = false;
             });
-            $('.chosen-select').each(function () {
-                if ($(this).val() === "")
-                    isValid = false
-            })
             return isValid;
         }
         // If all required fields are filled
@@ -204,7 +200,16 @@
             var userData = {
                 name: $("#name").val(),
                 photo: $("#photo").val(),
-                scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(),]
+                scores: [$("#q1").val(), 
+                $("#q2").val(), 
+                $("#q3").val(), 
+                $("#q4").val(), 
+                $("#q5").val(),
+                $("#q6").val(), 
+                $("#q7").val(), 
+                $("#q8").val(), 
+                $("#q9").val(), 
+                $("#q10").val(),]
             }
             // Grab the URL of the website
             var currentURL = window.location.origin;
